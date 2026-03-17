@@ -1,6 +1,15 @@
 # ⚖️ JurisAI: Pro Intellectual Property Law Assistant
 
-**JurisAI** is a high-precision RAG (Retrieval-Augmented Generation) assistant specialized in US Intellectual Property Law (Copyright, Patent, and Trademark). It navigates complex legal statutes to provide accurate answers with direct citations to the US Code.
+**JurisAI** is a high-precision RAG (Retrieval-Augmented Generation) assistant specialized in US Intellectual Property Law. It navigates complex legal statutes to provide accurate answers with direct citations to the US Code.
+
+## 🚀 Project Status: MVP
+Currently, **JurisAI** serves as an **MVP (Minimum Viable Product)** focusing on three core pillars of IP Law:
+* **Copyright** (Title 17 U.S.C.)
+* **Patent** (Title 35 U.S.C.)
+* **Trademark** (Title 15 U.S.C.)
+
+### 🌐 Scalability & Future Scope
+While the current version is optimized for Intellectual Property, the underlying **Two-Stage Retrieval Architecture** is domain-agnostic and highly scalable. By simply updating the source documents in the `/data` folder, the system can be seamlessly adapted to any domain of **US Law** (e.g., Contract Law, Tax Law, or Civil Procedure).
 
 
 
@@ -9,9 +18,9 @@
 * **Two-Stage Retrieval Pipeline**: 
     * **Phase 1 (Recall)**: Uses FAISS and HuggingFace Embeddings for fast candidate retrieval from legal PDFs.
     * **Phase 2 (Re-ranking)**: Integrates the **BGE-Reranker** (Cross-Encoder) to re-score candidates, ensuring the most contextually relevant legal sections are prioritized.
-* **Context-Aware Reasoning**: Maintains conversation history to handle follow-up questions and pronoun references (e.g., "Does *this right* apply to...").
+* **Context-Aware Reasoning**: Maintains conversation history to handle follow-up questions and pronoun references.
 * **Statutory Citations**: Automatically identifies and cites specific sections (e.g., § 203, § 107) from the source material.
-* **Domain Specificity**: Specifically tuned to distinguish between similar legal concepts across Title 15, 17, and 35 of the U.S.C.
+* **Domain Specificity**: Specifically tuned to distinguish between similar legal concepts across the U.S.C.
 
 ## 📺 Project Demo
 
