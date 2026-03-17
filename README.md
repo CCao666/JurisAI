@@ -41,3 +41,48 @@
 └── requirements.txt     # Project dependencies
 
 ```
+
+## 🛠️ Getting Started
+
+### 1. Installation
+Clone the repository and install the required dependencies:
+```bash
+git clone [https://github.com/CCao666/JurisAI.git](https://github.com/CCao666/JurisAI.git)
+cd JurisAI
+pip install -r requirements.txt
+```
+
+### 2. Configuration
+Create a `.env` file in the root directory and add your credentials:
+
+```text
+AZURE_OPENAI_API_KEY=your_api_key_here
+AZURE_OPENAI_ENDPOINT=your_endpoint_here
+```
+
+### 3. Running the Application
+* **Web UI (Gradio)**: `python web_app.py`
+* **CLI Version**: `python main.py`
+
+> **Note**: On the first run, the system will automatically parse the PDFs in the `/data` folder and build the local FAISS index.
+
+---
+
+## 🧠 System Architecture
+
+JurisAI implements a sophisticated **Two-Stage Retrieval** mechanism to ensure legal accuracy:
+
+
+
+* **Semantic Search (FAISS)**: The system chunks legal documents and uses `all-MiniLM-L6-v2` to retrieve the top 10 most similar fragments based on vector similarity.
+* **Cross-Encoder Re-ranking (BGE)**: To filter out "hallucinated" relevance, the `bge-reranker-base` model performs a deep semantic comparison between the user's specific query and the 10 candidates, selecting only the most legally pertinent sections.
+* **Prompt Engineering**: The final response is generated using a strictly constrained prompt that forces the LLM to provide citations in the `§ Section` format and admit if the information is not present in the provided context.
+
+## 📄 License
+
+Distributed under the MIT License. See `LICENSE` for more information.
+
+---
+
+## ⚖️ Disclaimer
+This project is for educational and research purposes only. It is not intended to provide legal advice. Always consult with a qualified legal professional for official matters.
