@@ -15,12 +15,9 @@
 
 ## 📺 Project Demo
 
-<div align="center">
-  <video src="https://github.com/CCao666/JurisAI/raw/main/assets/demo.mov" width="100%" controls title="JurisAI Demo">
-    Your browser does not support the video tag.
-  </video>
-</div>
+[![JurisAI Project Demo](https://img.youtube.com/vi/9rgE5FexYv0/maxresdefault.jpg)](https://www.youtube.com/watch?v=9rgE5FexYv0)
 
+> *💡 Click the image above to watch the full JurisAI demo on YouTube.*
 
 
 ## 🏗️ Tech Stack
