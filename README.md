@@ -15,7 +15,11 @@
 
 ## 📺 Project Demo
 
-> **Note**: Insert your `demo.mov` here by dragging and dropping the file into the GitHub editor.
+<div align="center">
+  <video src="https://github.com/CCao666/JurisAI/raw/main/assets/demo.mov" width="100%" controls title="JurisAI Demo">
+    Your browser does not support the video tag.
+  </video>
+</div>
 
 
 
